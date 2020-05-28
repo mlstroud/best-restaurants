@@ -6,12 +6,12 @@
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
 <ul>
-  @if (@Model.Restauraunts.Count == 0)
+  @if (@Model.Restaurants.Count == 0)
   {
     <p>No Restaurants Found.</p>
   }
 
-  @foreach(Restaurant restaurant in @Model.Restauraunts)
+  @foreach(Restaurant restaurant in @Model.Restaurants)
   {
     <li>@restaurant.Name: @restaurant.Description</li>
   }

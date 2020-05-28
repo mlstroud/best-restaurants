@@ -6,9 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using BestRestaurants.Models;
 
-namespace AnimalShelter
+namespace BestRestaurants
 {
-  public class BestRestaurants
+  public class Startup
   {
     public Startup(IHostingEnvironment env)
     {
@@ -25,7 +25,7 @@ namespace AnimalShelter
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-          .AddDbContext<BestRestaurantsContet>(options => options
+          .AddDbContext<BestRestaurantsContext>(options => options
           .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
     }
 
